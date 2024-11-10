@@ -1,0 +1,26 @@
+footer {
+  background-color: #ee0000;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.social-media__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding-bottom: 20px;
+}
+
+.social-media__link {
+  font-size: 1.7rem;
+  color: #fff;
+  padding: 10px;
+}
+
+.social-media__link:hover {
+  transform: scale(1.2);
+}
