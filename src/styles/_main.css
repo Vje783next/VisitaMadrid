@@ -31,17 +31,7 @@ main {
     gap: 25px;
   }
 
-  .main__container-index,
-  .main__container-presentacion,
-  .main__container-enlaces,
-  .main__container-alcala,
-  .main__container-granvia,
-  .main__container-mayor,
-  .main__container-palacio,
-  .main__container-parque,
-  .main__container-prado,
-  .main__container-sol,
-  .main__container-templo {
+  .main__container-responsive {
     width: 75%;
   }
 
@@ -112,11 +102,24 @@ article {
   list-style: none;
 }
 
+@media (min-width: 800px) {
+  .list-detalles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .list-detalles li {
+    flex: 1;
+  }
+}
+
 .list-detalles li {
   width: 100%;
   border: 1px solid #000;
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 .list-detalles li a {
@@ -127,8 +130,11 @@ article {
   color: #000;
 }
 
-.list-detalles li a:hover {
+.list-detalles li:hover {
   border: 1px solid var(--primary-color);
+}
+
+.list-detalles li a:hover {
   color: var(--primary-color);
 }
 
@@ -160,20 +166,33 @@ section {
   list-style: none;
 }
 
+@media (min-width: 800px) {
+  .detalles-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.detalles-links {
+  text-align: center;
+  list-style: none;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
 .detalles-links a {
   display: block;
+  padding: 10px 15px;
   text-decoration: none;
-  text-align: center;
-  background-color: var(--primary-color);
   color: var(--container-color);
-  border-radius: 5px;
-  padding: 5px 15px;
   font-weight: bold;
 }
 
-.detalles-links a:hover {
+.detalles-links:hover {
   border: 1px solid var(--primary-color);
-  color: var(--primary-color);
   background-color: var(--container-color);
 }
 
+.detalles-links a:hover {
+  color: var(--primary-color);
+}
